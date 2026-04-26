@@ -30,7 +30,7 @@ window.team = [
     photo: "https://metalist1925.com/players/foto/img_534.png?1776738438",
     goals: "",
     assists: "",
-    matches: "28",
+    matches: "29",
   },
   {
     name: "Дмитро Капінус",
@@ -52,7 +52,7 @@ window.team = [
     photo: "https://metalist1925.com/players/foto/img_522.png?1776738478",
     goals: "",
     assists: "3",
-    matches: "14",
+    matches: "15",
   },
   {
     name: "Євген Павлюк",
@@ -63,7 +63,7 @@ window.team = [
     photo: "https://metalist1925.com/players/foto/img_576.png?1776738509",
     goals: "2",
     assists: "2",
-    matches: "27",
+    matches: "28",
   },
   {
     name: "Олександр Мартинюк",
@@ -74,7 +74,7 @@ window.team = [
     photo: "https://metalist1925.com/players/foto/img_572.png?1776738592",
     goals: "",
     assists: "",
-    matches: "17",
+    matches: "18",
   },
   {
     name: "Ілля Крупський",
@@ -84,8 +84,8 @@ window.team = [
     nationality: "Україна",
     photo: "https://metalist1925.com/players/foto/img_556.png?1776738649",
     goals: "",
-    assists: "3",
-    matches: "28",
+    assists: "4",
+    matches: "29",
   },
   {
     name: "Артем Шабанов",
@@ -96,7 +96,7 @@ window.team = [
     photo: "https://metalist1925.com/players/foto/img_579.png?1776311695",
     goals: "1",
     assists: "1",
-    matches: "26",
+    matches: "27",
   },
   {
     name: "Валерій Дубко",
@@ -129,7 +129,7 @@ window.team = [
     photo: "https://metalist1925.com/players/foto/img_241.png?1776738726",
     goals: "3",
     assists: "3",
-    matches: "26",
+    matches: "27",
   },
   {
     name: "Арі Моура",
@@ -151,7 +151,7 @@ window.team = [
     photo: "https://metalist1925.com/players/foto/img_642.png?1775761558",
     goals: "",
     assists: "",
-    matches: "5",
+    matches: "6",
   },
   {
     name: "В'ячеслав Чурко",
@@ -184,7 +184,7 @@ window.team = [
     photo: "https://metalist1925.com/players/foto/img_578.png?1776738926",
     goals: "5",
     assists: "4",
-    matches: "26",
+    matches: "27",
   },
   {
     name: "Ніколас Аревало",
@@ -217,7 +217,7 @@ window.team = [
     photo: "https://metalist1925.com/players/foto/img_564.png?1776738948",
     goals: "3",
     assists: "2",
-    matches: "26",
+    matches: "27",
   },
   {
     name: "Іван Литвиненко",
@@ -283,7 +283,7 @@ window.team = [
     photo: "https://metalist1925.com/players/foto/img_614.png?1776312055",
     goals: "3",
     assists: "1",
-    matches: "20",
+    matches: "21",
   },
   {
     name: "Пітер Ітодо",
@@ -292,9 +292,9 @@ window.team = [
     position: "Нападник",
     nationality: "Нігерія",
     photo: "https://metalist1925.com/players/foto/img_580.png?1776738970",
-    goals: "12",
+    goals: "13",
     assists: "1",
-    matches: "25",
+    matches: "26",
   },
   {
     name: "Крістіан Мба",
@@ -305,7 +305,7 @@ window.team = [
     photo: "https://metalist1925.com/players/foto/img_557.png?1776738793",
     goals: "5",
     assists: "",
-    matches: "21",
+    matches: "22",
   },
 ];
 window.coaches = [
@@ -459,18 +459,18 @@ window.managment = [
 ];
 window.results = [
 {
+  date: "26.04.26",
+  opponent: "ЛНЗ Черкаси",
+  place: "Центральний стадіон, Черкаси",
+  competition: "УПЛ",
+  score: "1-1",
+},
+  {
   date: "22.04.26",
   opponent: "ФК Чернигів",
   place: "Центральний стадіон Полісся, Житомир",
   competition: "Кубок України",
   score: "0-0 (5:6 по пенальті)",
-},
-  {
-  date: "22.04.26",
-  opponent: "ФК Чернигів",
-  time: "18:00",
-  place: "Центральний стадіон Полісся, Житомир",
-  competition: "Кубок України",
 },
   {
   date: "18.4.26",
