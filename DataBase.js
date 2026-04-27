@@ -415,13 +415,6 @@ window.managment = [
 ];
   window.matches = [
 {
-  date: "26.04.26",
-  opponent: "ЛНЗ Черкаси",
-  time: "15:30",
-  place: "Центральний стадіон, Черкаси",
-  competition: "УПЛ",
-},
-{
   date: "03.05.26",
   opponent: "Полісся Житомир",
   time: "15:30",
