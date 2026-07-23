@@ -3,19 +3,19 @@ h1, h2, h3, p, li, ul {
 }
 
 body {
-  margin: 0;
-  font-family: sans-serif;
-  text-align: center;
-  color: black;
-  background-color: green;
-  background-size: cover;        /* растягивает без искажений */
-  background-position: center;   /* по центру */
-  background-repeat: no-repeat;  /* без повторов */
-  background-attachment: fixed;  /* фиксированный фон */
+    margin: 0;
+    font-family: sans-serif;
+    text-align: center;
+    color: black;
+    background-color: rgb(139, 0, 0);
+    background-size: cover; /* растягивает без искажений */
+    background-position: center; /* по центру */
+    background-repeat: no-repeat; /* без повторов */
+    background-attachment: fixed; /* фиксированный фон */
 }
 h1 {
-  background-color: black; 
-  color: green;            
+  background-color: rgb(255, 215, 0); 
+  color: rgb(139, 0, 0);            
   margin: 0;
   padding: 20px;
   font-size: 36px;
@@ -53,8 +53,8 @@ h1 {
 
 /* hover */
 .nav-btn:hover {
-  background: green;
-  color: black;
+  background: rgb(139, 0, 0);
+  color: white;
   scale: 1.09;
 }
 
@@ -233,7 +233,7 @@ img:hover {
   padding: 20px;
   max-width: 340px;
   flex: 1 1 300px;
-  border: 2px solid green;
+  border: 2px solid rgb(255, 215, 0);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   cursor: pointer;
@@ -247,7 +247,7 @@ img:hover {
 
 .news-card h4 {
   margin: 0 0 10px;
-  color: green;
+  color: ;
   font-size: 20px;
   font-weight: 700;
 }
@@ -260,8 +260,8 @@ img:hover {
 }
 
 .back-btn {
-  background: green;
-  color: #111;
+  background: rgb(255, 215, 0);
+  color: rgb(139, 0, 0);
   padding: 8px 16px;
   margin-bottom: 18px;
   border: none;
@@ -280,7 +280,7 @@ img:hover {
 
 .shop-btn {
   background-color: black;
-  color: green;
+  color: rgb(255, 215, 0);
   padding: 12px 24px;
   font-size: 18px;
   border: none;
@@ -415,7 +415,7 @@ img:hover {
 }
 
 a {
-  color: green;
+  color:rgb(139, 0, 0);
 }
 .history-picture {
  width: 300px;
@@ -426,7 +426,7 @@ a {
 }
 .news-img {
   width: 400px;
-  height: auto,
+  height: auto;
 }
 /* Контейнер з деталями гравця */
 .player-info {
@@ -445,8 +445,8 @@ a {
   display: block;
   margin: 25px auto;
   border-radius: 15px;
-  border: 3px solid green; /* помаранчевий акцент клубу */
-  box-shadow: 0 4px 20px white(0,0,0,0.4);
+  border: 3px solid rgb(255, 215, 0); /* помаранчевий акцент клубу */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
   transition: transform 0.3s ease;
 }
 
@@ -528,7 +528,7 @@ h2 {
   background: #ffffff;
   text-align: center;
 
-  border: 2px solid green; /* помаранчевий */
+  border: 2px solid rgb(139, 0, 0); /* помаранчевий */
   box-shadow: 0 4px 12px rgba(245, 124, 0, 0.25); /* тепла тінь */
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -560,7 +560,7 @@ h2 {
   font-size: 15px;
 }
 .goalPolissya {
-  color: green;
+  color: rgb(139, 0, 0);
 }
 .datumNews {
   color: white;
@@ -620,10 +620,10 @@ h2 {
   font-weight: 700;
 }
 
-.highlight-polissya td {
+.highlight-kharkiv td {
   border-top: 2px solid #000;
   border-bottom: 2px solid #000;
-  background: green;
+  background: rgb(139, 0, 0);
 }
 .table-wrapper {
   width: 100%;
@@ -647,8 +647,8 @@ h2 {
   padding: 20px;
   text-align: center;
   transition: transform 0.2s ease;
-  border-left: 2px solid black;
-  border-right: 2px solid green;
+  border-left: 2px solid rgb(255, 215, 0);
+  border-right: 2px solid rgb(139, 0, 0);
   height: auto;
 }
 
@@ -658,7 +658,7 @@ h2 {
 
 .legend-card img {
   width: auto;
-  height: 550;
+  height: 550px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -801,8 +801,8 @@ h2 {
 }
 
 /* Подсветка Шахтёра */
-.highlight-polissya {
-  background: green !important;
+.highlight-kharkiv td {
+  background: rgb(139, 0, 0);
   color: black;
   font-weight: bold;
 }
@@ -859,5 +859,5 @@ h2 {
   color: #555;
 }
 strong {
-  color: green;
+  color: rgb(139, 0, 0);
 }

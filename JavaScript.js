@@ -1,6 +1,6 @@
 // Заголовок сайта
 const h1 = document.createElement('h1');
-h1.textContent = "ФК Полісся Житомир";
+h1.textContent = "ФК Харків";
 document.body.appendChild(h1);
 
 // Навигация
@@ -16,31 +16,69 @@ const content = document.createElement('div');
 content.id = 'content';
 document.body.appendChild(content);
 nav.style.position = 'relative';
+// Footer
+const footer = document.createElement('footer');
+footer.style.display = 'flex';
+footer.style.justifyContent = 'center';
+footer.style.alignItems = 'center';
+footer.style.gap = '25px';
+footer.style.padding = '20px';
+footer.style.marginTop = '40px';
+footer.style.borderTop = '1px solid #444';
 
+// Telegram
+const tgLink = document.createElement('a');
+tgLink.href = 'https://t.me/FCKharkiv_News';
+tgLink.target = '_blank';
+tgLink.style.display = 'flex';
+tgLink.style.alignItems = 'center';
+tgLink.style.gap = '8px';
+tgLink.style.color = 'white';
+tgLink.style.textDecoration = 'none';
 
+const tgIcon = document.createElement('img');
+tgIcon.src = 'https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg';
+tgIcon.width = 22;
+
+const tgText = document.createElement('span');
+tgText.textContent = 'Telegram-канал';
+
+tgLink.append(tgIcon, tgText);
+
+// Почта
+const mailLink = document.createElement('a');
+mailLink.href = 'mailto:michaelstarshynov@gmail.com';
+mailLink.textContent = 'Питання? Напишіть нам';
+mailLink.style.color = 'white';
+mailLink.style.textDecoration = 'none';
+
+footer.append(tgLink, mailLink);
+
+// Добавляем в конец страницы
+document.body.appendChild(footer);
 // Страницы сайта
 const pages = {
   Головна: {
-    title: 'Вітаємо вас на сайті ФК Полісся Житомир',
+    title: 'Вітаємо вас на сайті ФК Харків',
     text: ` <div style="text-align:center;">
-      <h3 style="color:green;">🔥Полісся - це більше ніж футбол</h3>
-      <p style="font-size:18px;">Це пристрасть, боротьба, перемоги та емоції. Ми - Полісся, Ми - Сила!</p>
+      <h3 style="color:rgb(139, 0, 0);">🔥ФК Харків - це більше ніж футбол</h3>
+      <p style="font-size:18px;">Це пристрасть, боротьба, перемоги та емоції. Ми - Харків, Ми - Сила!</p>
       <p><strong>Приєднуйтесь до нас, слідкуйте за матчамі, купуйте квитки та підтримуйте команду!</strong></p>
-      <p>❗ Цей сайт не є офіційним сайтом Полісся.</p>
+      <p>❗ Цей сайт не є офіційним сайтом ФК Харків.</p>
       <button onclick="showPage('Квитки')" class="shop-btn">🎟️ Купити квитки на матч!</button>
       <button onclick="showPage('Новини')" class="shop-btn">📰 Читайте новини</button>
       <button onclick="showPage('Команда')" class="shop-btn">👥 Команда</button>
-      <img src="https://www.zhitomir.info/f/images/2025/12/19/232038/172b9ecb6b35e89a97ace6121e774d35_preview_w440_h290.jpg"
+      <img src="https://i.ytimg.com/vi/XR_UdcZ7Bos/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGH8gEyhHMA8=&rs=AOn4CLD-grdVtkHjakE1XgCiR3nxvyhCYw"
      style="max-width:100%; border-radius:10px; margin:20px auto; display:block;">
     </div>`
   },
-  Новини: { title: `Новини Полісся` },
+  Новини: { title: `Новини ФК Харків` },
   Клуб: {
-  title: `Клуб - ФК Полісся`,
+  title: `Клуб - ФК Харків`,
   text: `
-  <h3>ФК «Полісся» Житомир — амбітний український футбольний клуб, який стрімко розвивається та представляє місто Житомир у вищому дивізіоні українського футболу.</h3>
+  <h3>ФК «Харків» — амбітний український футбольний клуб, який стрімко розвивається та представляє місто Харків у вищому дивізіоні українського футболу.</h3>
 
-  <p>Футбольний клуб «Полісся» було засновано у 1959 році. Після відродження клубу у 2016 році команда почала активно розвиватися, залучати нових гравців та боротися за високі місця в українському футболі.</p>
+  <p>Футбольний клуб «Харків» було засновано у 2016 році. Після зникненя легендарного Металіста з мапи україньского футболу, у 2016 році був заснований Металіст 1925 Харків</p>
 
   <h4>🏆 Досягнення:</h4>
   <ul>
@@ -51,89 +89,96 @@ const pages = {
 
   <h4>Клуб сьогодні:</h4>
   <ul>
-    <li>Місто: Житомир</li>
-    <li>Стадіон: Центральний стадіон Житомира</li>
-    <li>Головний тренер: Руслан Ротань</li>
+    <li>Місто: Харків</li>
+    <li>Стадіон: Металіст </li>
+    <li>Головний тренер: Младен Бартулович</li>
     <li>Клуб активно розвиває інфраструктуру та академію</li>
-    <li>Амбіція клубу — боротьба за єврокубки</li>
+    <li>Амбіція клубу — найвищі місця в УПЛ</li>
   </ul>
   `
 },
 Інфраструктура: {
   text: `
-  <h2>Центральний стадіон Полісся</h2>
-  <p>Домашній стадіон ФК Полісся - Центральний стадіон - був відкритий у 1951 році. У 2025 році була реконструія. Наразі Полісся грає тут своі домашні матчі.</p>
+  <h2>Стадіон Металіст</h2>
+  <p>Домашній стадіон ФК Харків - стадіон Металіст - був відкритий у 1926 році. У 2007-09 роках була реконструія. Наразі Харків грає свої домашні матчі на Арені Лівій Берег через війну.</p>
   <h4>Місткість та характеристики:</h4>
   <ul>
-  <li>Місткість: 5 928 глядачів</li>
+  <li>Місткість: 40 000 глядачів</li>
   <li>Тип поля: натуральне поле</li>
-  <li>Розтошування: Житомир, Україна</li>
-  <li>Рік видкриття: 1951</li>
+  <li>Розтошування: Харків, Україна</li>
+  <li>Рік видкриття: 1926</li>
   </ul>
 
-  <img src="https://upl.ua/glide/uploads/2307/l_FdVHVcNuroOYoqpfuzFyL3wGvrYu2Z.jpg?w=1024&h=1024&fit=contain&s=42668e3ec06d202ff49de003d8353415" style="width:550px;">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaTnHrscjj7F3GHX3D-IwSV6PsthEzjV2uCcSO-rOETXEsTq1Hn-yGcQ0&s=10" style="width:550px;">
 
   <br>
 
   <h2>Тренерувальна база</h2>
-  <p>Тренерувальна база Полісся - одна із найсучасніших в України. Була відкрита в 2023 році.</p>
+  <p>Тренерувальна база Високий - була із найсучасніших в України. Була відкрита в 2009 році. У 2022 році баз пострадала через обстріл.</p>
   <h4>Характеристики</h4>
   <ul>
-  <li>Кількість полів: 5</li>
-  <li>Тип поля: 2 гибридні, 3 натуральні</li>
-  <li>Розтошування: Житомир, Україна</li>
-  <li>Рік видкриття: 2023</li>
+  <li>Кількість полів: 4</li>
+  <li>Тип полів (4): натуральне поле</li>
+  <li>Розтошування: Харківскя область, Україна</li>
+  <li>Рік видкриття: 2009</li>
   </ul>
 
-  <img src="https://pictures.ua.tribuna.com/image/46025122-d3ac-48b8-80d1-6060115219d9" style="width^550px;">
+  <img src="https://isport.ua/i/63/25/60/2/6325602/image_main/f0bfc8601d944722cd31629f197909e7-resize_crop_1Xquality_100Xallow_enlarge_0Xw_1200Xh_630.jpg" style="width^550px;">
   `
 },
 Історія: {
-  title: `Історія ФК «Полісся» Житомир`,
+  title: `Історія ФК «Харків» `,
   text: `
     <br>
-    <img src="https://sportbusiness.media/wp-content/uploads/2025/07/photo_2025-07-02_15-21-15.jpg"
+    <img src="https://images.football.ua/i/news/630x373/582/582288.jpg"
          style="max-width:100%; border-radius:10px; display:block; margin:20px auto;">
     <br>
 
-    <p>ФК «Полісся» Житомир — футбольний клуб із багатою історією, який представляє місто Житомир та весь регіон Полісся. Команда пройшла шлях від радянського футболу до сучасної Української Прем'єр-ліги.</p>
+    <p>ФК «Харків» — футбольний клуб із багатою історією, який представляє місто Харків та весь регіон Харківщіни. Команда пройшла шлях від аматорів до сучасної Української Прем'єр-ліги.</p>
 
-    <h4>Заснування клубу</h4>
-    <p>Футбольний клуб «Полісся» було засновано у 1959 році. Команда представляла Житомир у різних футбольних лігах СРСР та поступово здобувала популярність серед місцевих уболівальників.</p>
+    <h4>Сезон 2016/17</h4>
+    <p>Футбольний клуб «Металіст 1925» було засновано у 2016 році. Вже у першому році існуванння клуб виходить до другої ліги з першого місця.</p>
 
-    <h4>Виступи у незалежній Україні</h4>
-    <p>Після проголошення незалежності України клуб продовжив виступи у національних чемпіонатах. «Полісся» стало важливою частиною футбольного життя Житомира та регіону.</p>
+    <h4>Сезон 2017/18</h4>
+    <p>Металіст 1925 дебютує у другій лізі України. Клуб займає 2 місце та підимається до Першої ліги.</p>
 
-    <h4>Складні роки та відродження</h4>
-    <p>У 2000-х роках клуб переживав складні часи і певний період не виступав на професійному рівні. У 2016 році футбольну команду було відроджено, після чого розпочався новий етап розвитку клубу.</p>
+    <h4>Сезон 2018/19</h4>
+    <p>Клуб грає у першій лізі України. Команда займає 4 місе, до підвішення не хватило пару очок.</p>
 
-    <h4>Повернення до великого футболу</h4>
-    <p>Після відродження клуб почав швидко розвиватися, зміцнювати склад і покращувати інфраструктуру. У сезоні 2022/23 «Полісся» стало чемпіоном Першої ліги України та вперше в історії вийшло до Української Прем'єр-ліги.</p>
+    <h4>Сезон 2019/20</h4>
+    <p>Команда займає 7 місце у першій лізі України. е був нестабильний сезон, без боротьби за підйом до найвищого турнира України</p>
+    <img class="news-img"
+         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-Rx8esEgLASJaC_j_xZdW-fBEtDbZnvVDch9PIi0ETjes6LlBaGcYzbUb&s=10g"
+         title="ФК «Металіст 1925» у сезоні 2020/21">
+    <h4>Сезон 2020/21</h4>
+    <p>Металіст 1925 займає 3 сходнику першої ліги та виходить до УПЛ.</p>
 
-    <h4>Домашня арена</h4>
-    <p>Домашнім стадіоном клубу є Центральний стадіон у Житомирі. Після реконструкції він став сучасною футбольною ареною, де проходять матчі національного чемпіонату.</p>
+    <h4>Сезон 2021/22</h4>
+    <p>Команда займала 10 сходинку УПЛ після 18 турів, але через війну з росією сезон було дострочно завершено.</p>
 
-    <img class="history-picture"
-         src="https://cdn4.suspilne.media/images/resize/794x1.5/ed79720717fb10ef.jpg"
-         title="Центральний стадіон Житомира">
+    <h4>Сезон 2022/23</h4>
+    <p>Перший повний сезон УПЛ під час війни. Металіст 1925 зайняв 12 сходинку та остався в УПЛ.</p>
 
-    <h4>Сучасний етап</h4>
-    <p>Сьогодні «Полісся» активно розвивається, залучає нових гравців та ставить перед собою амбітні цілі — закріпитися серед найкращих клубів України та боротися за участь у європейських турнірах.</p>
+    <h4>Сезон 2023/24</h4>
+    <p>Дуже важкий сезон. Металіст 1925 займає 16 сходинку УПЛ та вилітає з УПл до перщої ліги</p>
 
-    <h4>Майбутнє клубу</h4>
-    <p>Клуб прагне розвивати молодих футболістів, покращувати інфраструктуру та представляти Житомир на найвищому рівні українського футболу.</p>
+    <h4>Сезон 2024/25</h4>
+    <p>Команда починає новий сезон з метою відновлення та підйому в класифікації. Клуб займає 3 сходинку першої лиги та в стиках перемагає лівій берег та підимается до УПЛ.</p>
+<img class="news-img" src="https://football24.ua/resources/photos/news/202512/915782.jpg?v=202512122628&q=85&output=webp" title="Металіст 1925 у сезоні 25/26">
+    <h4>Сезон 2025/26</h4>
+    <p>Металіст 1925 займає 5 сходинку УПЛ, це рекорд. Клуб також дойшов до півфіналу Кубка України. </p>
+
+    <h4>Сезон 2026/27</h4>
+    <p>Металіст 1925 перетворюється на ФК Харків.</p>
   `,
 },
-Логотип: {
-  title: `Logo`,
-text: `<h3>Логотип клубу:</h3> <img src="https://upload.wikimedia.org/wikipedia/uk/thumb/c/c8/FC_Polissya_Zhytomyr_logo.svg/250px-FC_Polissya_Zhytomyr_logo.svg.png"      title="Логотип ФК Полісся Житомир"      style="max-width:300px; border-radius:10px; display:block; margin:20px auto;">`},
   Команда: { title: `Team` },
   Матчі: { 
     title: `Матчі`, 
-    text:  `<p>Місце в УПЛ: 3 місце</p><p>Місце в Кубку України: виліт в 1/16 фіналу</p><p>Місце в Лізі Конференцій: виліт в 3 кваліфікаційному єтапі.</p>`
+    text:  `<p>Місце в УПЛ: сезон не почався</p><p>Місце в Кубку України: сезон не почався</p>`
   },
    Тренери: { title: `Coaches` },
-   Легенди: { title: `Legends` },
+ 
 Таблиця: {
   title: 'Таблиця',
   text: `
@@ -158,205 +203,205 @@ text: `<h3>Логотип клубу:</h3> <img src="https://upload.wikimedia.or
 
         <tr>
           <td>1</td>
-          <td class="team">🏆Шахтар Донецьк</td>
-          <td>28</td>
-          <td>21</td>
-          <td>6</td>
-          <td>1</td>
-          <td>68</td>
-          <td>18</td>
-          <td>69</td>
+          <td class="team">Шахтар Донецьк</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
         </tr>
 
         
          <tr>
           <td>2</td>
           <td class="team">ЛНЗ Черкаси</td>
-          <td>28</td>
-          <td>17</td>
-          <td>6</td>
-          <td>5</td>
-          <td>38</td>
-          <td>16</td>
-          <td>7</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
         </tr>
 
 
-    <tr class="highlight-polissya">
+    <tr>
           <td>3</td>
           <td class="team">Полісся Житомир</td>
-          <td>28</td>
-          <td>17</td>
-          <td>4</td>
-          <td>7</td>
-          <td>49</td>
-          <td>21</td>
-          <td>55</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
         </tr>
 
 
          <tr>
           <td>4</td>
           <td class="team">Динамо Київ</td>
-          <td>28</td>
-          <td>15</td>
-          <td>6</td>
-          <td>7</td>
-          <td>61</td>
-          <td>34</td>
-          <td>51</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
         </tr>
 
 
          <tr>
           <td>5</td>
           <td class="team">Кривбас</td>
-          <td>28</td>
-          <td>13</td>
-          <td>8</td>
-          <td>7</td>
-          <td>50</td>
-          <td>42</td>
-          <td>47</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
         </tr>
 
 
-   <tr>
+   <tr class="highlight-kharkiv">
           <td>6</td>
-          <td class="team">Металіст 1925</td>
-          <td>28</td>
-          <td>12</td>
-          <td>11</td>
-          <td>5</td>
-          <td>34</td>
-          <td>18</td>
-          <td>47</td>
+          <td class="team">ФК Харків</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
         </tr>
 
      <tr>
           <td>7</td>
           <td class="team">Колос Ковалівка</td>
-          <td>28</td>
-          <td>12</td>
-          <td>10</td>
-          <td>6</td>
-          <td>29</td>
-          <td>23</td>
-          <td>46</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
         </tr>
 
 
            <tr>
           <td>8</td>
           <td class="team">Зоря Луганьск</td>
-          <td>28</td>
-          <td>11</td>
-          <td>9</td>
-          <td>8</td>
-          <td>40</td>
-          <td>35</td>
-          <td>42</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
         </tr>
 
         <tr>
           <td>9</td>
           <td class="team">Карпати Львів</td>
-          <td>28</td>
-          <td>9</td>
-          <td>11</td>
-          <td>8</td>
-          <td>37</td>
-          <td>29</td>
-          <td>38</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
         </tr>
 
   <tr>
           <td>10</td>
           <td class="team">Верес Рівне</td>
-          <td>28</td>
-          <td>7</td>
-          <td>10</td>
-          <td>11</td>
-          <td>26</td>
-          <td>37</td>
-          <td>31</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
         </tr>
         
          <tr>
           <td>11</td>
           <td class="team">Епіцентр</td>
-          <td>28</td>
-          <td>7</td>
-          <td>6</td>
-          <td>14</td>
-          <td>35</td>
-          <td>44</td>
-          <td>30</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
         </tr>
 
         
          <tr>
           <td>12</td>
           <td class="team">Кудрівка</td>
-          <td>28</td>
-          <td>6</td>
-          <td>7</td>
-          <td>15</td>
-          <td>29</td>
-          <td>45</td>
-          <td>25</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
         </tr>
 
 
 <tr>
           <td>13</td>
           <td class="team">Оболонь Київ</td>
-          <td>26</td>
-          <td>5</td>
-          <td>10</td>
-          <td>12</td>
-          <td>23</td>
-          <td>48</td>
-          <td>25</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
         </tr>
 
 
         <tr>
           <td>14</td>
-          <td class="team">Рух Львів</td>
-          <td>28</td>
-          <td>6</td>
-          <td>3</td>
-          <td>19</td>
-          <td>20</td>
-          <td>53</td>
-          <td>21</td>
+          <td class="team">Лівій Берег</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
         </tr>
 
 
 
          <tr>
           <td>15</td>
-          <td class="team">Олександрія</td>
-          <td>27</td>
-          <td>2</td>
-          <td>7</td>
-          <td>18</td>
-          <td>20</td>
-          <td>53</td>
-          <td>13</td>
+          <td class="team">Буковина</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
         </tr>
 
          <tr>
           <td>16</td>
-          <td class="team">Полтава</td>
-          <td>28</td>
-          <td>2</td>
-          <td>6</td>
-          <td>19</td>
-          <td>23</td>
-          <td>72</td>
-          <td>12</td>
+          <td class="team">Чорноморець</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
         </tr>
 
       </tbody>
@@ -366,16 +411,11 @@ text: `<h3>Логотип клубу:</h3> <img src="https://upload.wikimedia.or
 },
   Квитки: {
     title: `Купити квітки`,
-    text: `Квитки на матч можно купити <a href="https://kasa.com.ua/zhitomir" target="_blank">тут</a>.<br><img src="https://www.upl.ua/glide/uploads/2502/tyqiwOyhx7Td25MldZ1XR5YLXpWOeqcs.jpg?w=900&h=540&fit=contain&s=d874f63bb0a14db0e51ac13697475064">`
+    text: `Квитки на матч можно купити <a href="https://fckharkiv.com/tickets" target="_blank">тут</a>.<br><img src="https://fckharkiv.com/uploads/content/mediaAlbums/183/004-d-2026-07-16-t-22-37-17.webp">`
   },
   Магазин: {
     title: `Магазин`,
-    text: `Магазин Полісся можно знайти <a href="https://shop.polissyafc.com/" target="_blank">тут</a>.<img src="https://polissyafc.com/uploads/image/35edbd06c6-img20251219143258511.jpg">`
-  },
-  Телеграм: {
-    title: `Телеграм Канал`,
-    text: `<p>Підпісуйтесь на наш <a href="https://t.me/PolissyaZhytomyr" target="_blank">Телеграм канал</a> заради більше новин.</p>
-    <img src="https://static.kyivpost.com/storage/2025/04/06/b6393cd6e077e6acb25fa41f14fee807.jpeg?w=1280&f=webp" >`
+    text: `Магазин ФК Харків можно знайти <a href="https://fckharkiv.com/shop" target="_blank">тут</a>.<img src="https://static.champion.com.ua/champion/images/doc/a/6/274021/a64c55c95de516157988581a1ab96ab1.jpeg?w=760&q=90">`
   },
   Менеджмент: {
     title: "Менеджмент",
@@ -383,22 +423,17 @@ text: `<h3>Логотип клубу:</h3> <img src="https://upload.wikimedia.or
   Результати: {
     title: "Результати",
   },
-  Трофеї: {
-    title: "Трофеї",
-    text: '<img style="width:600px;" src="https://cdn4.suspilne.media/images/8a94544538a0511f.png"><h4>Одноразовий переможець Першої Ліги.</h4><br><img style="width:600px;" src="https://ukrfootball.ua/wp-content/uploads/Drugoe/polissyawinner.webp"><h4>Одноразовий чемпіон Winter Cup.</h4>',
-  }
+
 
   
 };
 
 const menuGroups = {
   'Головна': [],
-  'Клуб': ['Історія', 'Інфраструктура', 'Логотип', 'Менеджмент', 'Трофеї'],
+  'Клуб': ['Історія', 'Інфраструктура', 'Менеджмент',],
   'Матчі': ['Таблиця', 'Результати'],
   'Магазин': ['Квитки'],
-  'Команда': ['Тренери',],
-  'Телеграм': [],
-  
+  'Команда': ['Тренери',],  
 };
 
 
@@ -577,7 +612,7 @@ function showManagment() {
   content.innerHTML = '';
 
   const title = document.createElement('h2');
-  title.textContent = 'Менеджмент ФК Шахтар';
+  title.textContent = 'Менеджмент ФК Харків';
   content.appendChild(title);
 
   const container = document.createElement('div');
@@ -774,7 +809,7 @@ function showNews() {
     preview.innerHTML = `
       <h3>${item.title}</h3>
       <p style="color: white;">${item.datum}</p>
-      ${item.pinned ? '<p style="color: green;">📌 Закріплено</p>' : ''}
+      ${item.pinned ? '<p style="color: rgb(255, 215, 0)  ;">📌 Закріплено</p>' : ''}
     `;
 
     grid.appendChild(preview);
